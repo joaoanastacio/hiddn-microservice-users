@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  users:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8081:8081
+    depends_on:
+      - users-database
+  
+  users-database:
+    image: postgres:13
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=hiddn-users-database
+      - POSTGRES_USER=hiddn-users-database
+      - POSTGRES_PASSWORD=hiddn-users-localhost-pwd
