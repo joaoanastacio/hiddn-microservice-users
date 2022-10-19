@@ -10,7 +10,7 @@ RUN gradle build --no-daemon
 # Run Stage
 FROM openjdk:11-jre-slim
 
-EXPOSE 3091
+EXPOSE 8081
 
 RUN mkdir /app
 
