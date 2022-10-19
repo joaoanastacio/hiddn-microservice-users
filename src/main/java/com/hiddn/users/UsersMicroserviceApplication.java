@@ -5,9 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+@Configuration
 @SpringBootApplication
 @ComponentScan(basePackages = "com.hiddn.users")
-@Configuration
 public class UsersMicroserviceApplication {
 
 	public static void main(String[] args) {
