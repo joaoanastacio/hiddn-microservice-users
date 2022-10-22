@@ -1,12 +1,12 @@
 CREATE TABLE TB_PROFILE(
     profile_identifier SERIAL PRIMARY KEY,
-    profile_username CHAR(25) UNIQUE NOT NULL,
+--    profile_username CHAR(25) UNIQUE NOT NULL, Adicionar o username fixo para conta e um variavel para cada conversa
     profile_email CHAR(255) UNIQUE NOT NULL,
-    profile_phone CHAR(20) UNIQUE NOT NULL,
+--    profile_phone CHAR(20) UNIQUE NOT NULL, Remover
     profile_password CHAR(50) NOT NULL,
     profile_name CHAR(120) NOT NULL,
-    profile_age INT NOT NULL,
-    profile_biography CHAR(240) NOT NULL,
+--    profile_age INT NOT NULL, Remover
+--    profile_biography CHAR(240) NOT NULL, Nao obrigatorio
     profile_photo_url CHAR(255),
     profile_created_date TIMESTAMP NOT NULL,
     profile_updated_date TIMESTAMP
